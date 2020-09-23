@@ -1,19 +1,23 @@
 <template>
   <div id="app">
-    <img src="https://cdn.discordapp.com/attachments/392353546332405763/757956807778893954/cropped-animeworld-01.png" class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto">
-    <Anime/>
+    <a href="./components/Anime.vue">
+      <img
+        src="https://cdn.discordapp.com/attachments/392353546332405763/757956807778893954/cropped-animeworld-01.png"
+      />
+    </a>
+    <Anime />
   </div>
 </template>
 
 <script>
-import Anime from './components/Anime.vue'
+import Anime from "./components/Anime.vue";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    Anime
-  }
-}
+    Anime,
+  },
+};
 </script>
 
 <style>
@@ -25,7 +29,7 @@ export default {
   color: #2c3e50;
   margin-top: 60px;
 }
-body{
+body {
   background-image: url("https://cdn.discordapp.com/attachments/392353546332405763/758277143858774016/704014176bc1f285c0c627b4910b64ae.jpg");
   background-attachment: fixed;
   background-repeat: no-repeat;

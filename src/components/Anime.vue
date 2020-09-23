@@ -4,12 +4,12 @@
 
     <div class="col-sm">
       <input type="text" v-model="textSearch" placeholder="ค้นหาการ์ตูน" />
-      <b-button @click="searchData()" variant="danger">Search Anime</b-button>
+      <b-button @click="searchData()" variant="danger">Search Anime</b-button><br/><br/>
       <b-card-group columns>
         <b-card
           v-for="data in animeData"
           :key="data.mal_id"
-          style="width: 450px;"
+          style="width: 450px"
           class="mb-3"
         >
           <b-row>
@@ -17,11 +17,11 @@
               <a :href="data.url">
                 <b-card-img :src="data.image_url"></b-card-img>
               </a>
-              Episode : {{data.episodes}}
+              Episode : {{ data.episodes }}
             </b-col>
             <b-col md="8">
               <b-card-body :title="data.title">
-                <b-card-text>{{data.synopsis}}</b-card-text>
+                <b-card-text>{{ data.synopsis }}</b-card-text>
               </b-card-body>
             </b-col>
           </b-row>
@@ -50,7 +50,7 @@ export default {
       axios
         .get("https://api.jikan.moe/v3/search/anime?q=" + this.textSearch + "")
         .then((response) => {
-          (this.animeData = response.data.results.slice(0,15))
+          this.animeData = response.data.results.slice(0, 12);
         })
         .catch((err) => {
           console.log(err);
