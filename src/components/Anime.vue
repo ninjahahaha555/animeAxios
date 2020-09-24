@@ -40,9 +40,6 @@ export default {
     return {
       animeData: null,
       textSearch: "",
-      perPage: 9,
-      currentPage: 1,
-      run: false,
     };
   },
   methods: {
@@ -50,7 +47,7 @@ export default {
       axios
         .get("https://api.jikan.moe/v3/search/anime?q=" + this.textSearch + "")
         .then((response) => {
-          this.animeData = response.data.results.slice(0, 12);
+          this.animeData = response.data.results.slice(0, 15);
         })
         .catch((err) => {
           console.log(err);
