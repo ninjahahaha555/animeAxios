@@ -1,7 +1,6 @@
 <template>
-  <div class="'row text-light">
+  <div class="row text-light">
     <div class="col-sm"></div>
-
     <div class="col-sm">
       <input type="text" v-model="textSearch" placeholder="ค้นหาการ์ตูน" />
       <b-button @click="searchData()" variant="danger">Search Anime</b-button
@@ -31,7 +30,6 @@
           </b-row>
         </b-card>
       </b-card-group>
-
       <div v-if="run == true">
         <b-pagination
           v-model="currentPage"
@@ -44,7 +42,6 @@
         ></b-pagination>
       </div>
     </div>
-
     <div class="col-sm"></div>
   </div>
 </template>
